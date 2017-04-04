@@ -110,6 +110,10 @@ namespace ExcelUtilities.Forms
                     {
                         xfp.CritNonCritLiftWorks(sheet, lstF820, out outF741s);
                     }
+                    if (sheet.getSheetName().ToUpper().Contains("ESC"))
+                    {
+                        xfp.CritNonCritEscalatorWorks(sheet, lstF820, out outF741s);
+                    }
                     f741s.AddRange(outF741s);
                 }
                 workbook = null;
